@@ -543,6 +543,7 @@ mean(iris$Sepal.Length) # ___
 ```
 
 ```r
+avg_sepal_length <- mean(iris$Sepal.Length)
 sd(iris$Sepal.Length) # ___
 ```
 

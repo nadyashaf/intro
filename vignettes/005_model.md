@@ -3,7 +3,7 @@ title: "Model"
 author: "Muhammad Aswan Syahputra"
 date: "4/9/2019"
 output:
-  html_document: 
+  html_document:
     df_print: default
     fig_height: 6
     fig_width: 9
@@ -13,7 +13,9 @@ output:
     toc: yes
     toc_collapsed: yes
     toc_float: yes
-editor_options: 
+  pdf_document:
+    toc: yes
+editor_options:
   chunk_output_type: inline
 ---
 
@@ -426,7 +428,8 @@ evals %>%
   gather_predictions(model1, model2) %>% 
   ggplot(aes(x = pred, y = score, colour = model)) +
   geom_jitter() +
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~model, scales = "free")
 ```
 
 ![](005_model_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
